@@ -2,3 +2,11 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+let div = document.querySelector('.houseimg-container');
+
+div.style.classList.add('')
+
+div.addEventListener('click', () => {
+    alert('clicked')
+})
