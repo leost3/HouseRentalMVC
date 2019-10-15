@@ -1,0 +1,49 @@
+﻿@model ApartmentRentalSystem.Models.Apartment.Apartment
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Apartment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <div class="img">
+            <img src="@Html.DisplayFor(model => model.ImgUrl)" style="width:450px; height:450px" alt="@Html.DisplayFor(model => model.Address)" />
+        </div>
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rooms)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rooms)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bathrooms)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bathrooms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RentPrice)
+        </dd>
+    </dl>
+</div>
+<div>
+
+    <input type="hidden" asp-for="Id" />
+    <a asp-action="Appointment" asp-route-id="@Model.Id" class="btn btn-primary">Book Appointment</a> |
+    <a asp-action="Message" asp-route-id="@Model.Id" class="btn btn-success">Send message to owner</a> |
+    <a asp-action="Index" class="btn btn-danger">Back to List</a>
+</div>
